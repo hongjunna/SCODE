@@ -44,7 +44,7 @@ class _MainPageState extends State<MainPage> {
       //   color: Colors.white,
       // ),textAlign: TextAlign.center,),
       //   backgroundColor: const Color(tittleBackGround),
-      // ),),),
+      // ),),),//이전 앱 바
       appBar:
       AppBar(
         elevation: 0,
