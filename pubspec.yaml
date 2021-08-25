@@ -61,7 +61,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: gsans
+    - family: Gsans
       fonts:
         - asset: fonts/GmarketSansTTFMedium.ttf
   #   - family: Trajan Pro
