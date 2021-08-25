@@ -20,10 +20,13 @@ class _LandingPageState extends State<LandingPage> {
       Get.offAll(Main());
     });
   }
+
+  static const backGround = 0xff0E0E0E;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.black87,
+        color: const Color(backGround),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.end,

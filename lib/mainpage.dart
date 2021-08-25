@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,59 +25,61 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+
+  static const backGround = 0xff0E0E0E;
+  static const tittleBackGround = 0xff000000;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.black87,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              height: 20,
-              color: Colors.black,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  height: 50,
-                  color: Colors.black,
+    return Scaffold(
+      backgroundColor: const Color(backGround),
+      // appBar: PreferredSize(
+      // preferredSize: Size.fromHeight(65.0),//앱바 사이즈 조정
+      // child: SafeArea(child:
+      // AppBar(title:
+      // Text("SCODE SYSTEM",
+      //   style: TextStyle(
+      //   decoration: TextDecoration.none,
+      //   fontSize: 21,
+      //   color: Colors.white,
+      // ),textAlign: TextAlign.center,),
+      //   backgroundColor: const Color(tittleBackGround),
+      // ),),),
+      appBar:
+      AppBar(
+        elevation: 0,
+        backgroundColor: const Color(tittleBackGround),
+        toolbarHeight: 65,
+        title: Align(
+          alignment: Alignment.center,
+          child: Text(
+            'SCODE SYSTEM',
+          style: TextStyle(
+                decoration: TextDecoration.none,
+                fontFamily: 'Gsans_KR',
+                fontWeight: FontWeight.w500,
+                fontSize: 21,
+                color: Colors.white,
                 ),
-              Container(
-                height: 50,
-
-                child: Text("test",
-                  style: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontSize: 21,
-                    color: Colors.white,
-
-                  ),textAlign: TextAlign.center,
-                ),
+          ),
+        ),),//새로운 앱바
+      body: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("now making",
+                    style: TextStyle(
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Gsans_KR',
+                        fontSize: 36,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white
+                    ), textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-            Container(
-               height: 50,
-               color: Colors.black,
-                ),
-            ],),
-            Container(
-              height: 20,
-              color: Colors.black,
-            ),
-            Text("Main Page",
-              style: TextStyle(
-                  decoration: TextDecoration.none,
-                  fontFamily: 'Gsans_KR',
-                  fontSize: 36,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white
-              ), textAlign: TextAlign.center,
-            ),
-          ],
-        )
+      ),
     );
   }
 }

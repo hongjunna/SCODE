@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:scode/GetMaterialApp.dart';
+import 'package:scode/mainpage.dart';
 
 void main() {
   runApp(MyApp());
